@@ -8,10 +8,10 @@ import { Fragment } from "react";
 const ItemListContainer = ({ greetings }) => {
   const { generoId } = useParams();
   const [items, setItems] = useState([]);
-  const [loader, setLoader] = useState(true);
+  /* const [loader, setLoader] = useState(true); */
 
   useEffect(() => {
-    setLoader(true);
+    /* setLoader(true); */
     const traerProductos = new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(products);
@@ -28,9 +28,10 @@ const ItemListContainer = ({ greetings }) => {
       });
   }, [generoId]);
 
-  return loader ? (
+  /* return loader ? (
     <h1>Loading products...</h1>
-  ) : (
+  ) : ( */
+  return (
     <Fragment>
       <h1 className="title-color">{greetings}</h1>
       <ItemList items={items} />

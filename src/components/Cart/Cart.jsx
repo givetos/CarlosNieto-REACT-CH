@@ -5,18 +5,18 @@ import "./index.css";
 import { Link } from "react-router-dom";
 
 const Cart = () => {
-  const { cart, borrar } = useContext(CartContext);
+  const { cart, borrar, total } = useContext(CartContext);
   const deleteProduct = useDeleteFromCart();
 
   return cart.length === 0 ? (
     <div className="zeroProductsContainer">
-      <h1 className="zeroProductsTitle">Aún no hay productos en el carrito</h1>
-      <p className="zeroProductsSubtitle">
-        Hacé clic en el botón para volver al Home
-      </p>
+      <h1 className="zeroProductsTitle">
+        You don't have any books added to your cart
+      </h1>
+      <p className="zeroProductsSubtitle">Click to return Home</p>
       <Link to="/">
         <button type="button" className="btn btn-secondary btn-sm">
-          Volver al Home
+          Go back to home
         </button>
       </Link>
     </div>

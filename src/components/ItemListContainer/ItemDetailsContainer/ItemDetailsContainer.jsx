@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import ItemDetails from "../ItemDetails/ItemDetails.jsx";
 import { products } from "../Item/Items.jsx";
 import { Fragment } from "react";
 import { useParams } from "react-router-dom";
-import { CartContext } from "../../../context/CartContext";
+import CartContext from "../../../context/CartContext";
 
 const ItemDetailsContainer = ({ greetings }) => {
   const { id } = useParams();
@@ -13,7 +13,7 @@ const ItemDetailsContainer = ({ greetings }) => {
   const { addToCart } = useContext(CartContext);
 
   useEffect(() => {
-    setLoader(true);
+    /*     setLoader(true); */
     const traerProductos = new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(products);
@@ -35,9 +35,10 @@ const ItemDetailsContainer = ({ greetings }) => {
     setIrAlCarrito(true);
   };
 
-  return loader ? (
+  /* loader ? (
     <h1>Loading product...</h1>
-  ) : (
+  ) : */
+  return (
     <Fragment>
       <h1 className="Titulo_color">{greetings}</h1>
       <ItemDetails item={item} onAdd={onAdd} irAlCarrito={irAlCarrito} />
