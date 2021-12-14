@@ -35,9 +35,6 @@ const ItemDetailsContainer = ({ greetings }) => {
     setIrAlCarrito(true);
   };
 
-  /* loader ? (
-    <h1>Loading product...</h1>
-  ) : */
   return (
     <Fragment>
       <h1 className="Titulo_color">{greetings}</h1>

@@ -1,19 +1,22 @@
 import React, { useContext } from "react";
 import "./index.css";
 import { IoCartOutline } from "react-icons/io5";
-import { CartContext } from "../../context/CartContext";
+import { Link } from "react-router-dom";
+import CartContext from "../../context/CartContext";
 
 const CartWidget = () => {
-  const { unidades } = useContext(CartContext);
+  const { cart } = useContext(CartContext);
 
-  return (
+  return cart.length > 0 ? (
     <>
-      <div className="cartContainer">
-        <IoCartOutline className="cart" />
-        <span>{unidades()}</span>
+      <div>
+        <Link to="/cart" className="nav-item nav-link">
+          <IoCartOutline className="cart" />
+          <span> {cart.length} </span>
+        </Link>
       </div>
     </>
-  );
+  ) : null;
 };
 
 export default CartWidget;

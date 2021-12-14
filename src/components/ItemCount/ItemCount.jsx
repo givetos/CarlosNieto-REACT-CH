@@ -1,5 +1,6 @@
 import { useState, useContext } from "react";
 import CartContext from "../../context/CartContext.jsx";
+import "./index.css";
 
 const ItemCount = ({ stock, onAdd, item }) => {
   const { addToCart } = useContext(CartContext);
@@ -17,9 +18,17 @@ const ItemCount = ({ stock, onAdd, item }) => {
     <div>
       <h6>{`Quantity: ${number}`}</h6>
 
-      <button onClick={onIncrease}>+</button>
-      <button onClick={onDecrease}>-</button>
-      <button disabled={number === 0} onClick={() => addToCart(item, number)}>
+      <button className="btn btn-secondary margin-right" onClick={onIncrease}>
+        +
+      </button>
+      <button className="btn btn-secondary margin-right" onClick={onDecrease}>
+        -
+      </button>
+      <button
+        className="btn btn-secondary margin-right"
+        disabled={number === 0}
+        onClick={() => addToCart(item, number)}
+      >
         Add to Cart
       </button>
     </div>

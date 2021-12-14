@@ -1,4 +1,5 @@
 import logo from "../assets/murakami-logo.png";
+import CartWidget from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -25,7 +26,7 @@ const Header = () => {
                   className="nav-item nav-link"
                 >
                   <button type="button" className="btn btn-light">
-                    MAGICAL REALISM {/* <span className="sr-only"></span> */}
+                    MAGICAL REALISM
                   </button>
                 </Link>
                 <Link to="/genero/Biography" className="nav-item nav-link">
@@ -38,60 +39,9 @@ const Header = () => {
                     ROMANCE
                   </button>
                 </Link>
-                <Link to="/cart" className="nav-item nav-link">
-                  <div>
-                    <button
-                      type="button"
-                      className="btn btn-secondary"
-                      data-toggle="modal"
-                      data-target=".bd-example-modal-lg"
-                      id="botonCarrito"
-                    >
-                      Cart{" "}
-                      <span id="carritoCantidad" className="badge badge-light">
-                        0
-                      </span>
-                    </button>
-                    <div
-                      className="modal fade bd-example-modal-lg"
-                      id="carrito"
-                      tabindex="-1"
-                      role="dialog"
-                      aria-labelledby="myLargeModalLabel"
-                      aria-hidden="true"
-                    >
-                      <div className="modal-dialog modal-lg">
-                        <div className="modal-content" id="carritoProducto">
-                          <table className="table table-bordered">
-                            <thead>
-                              <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Subtotal x Quantity</th>
-                              </tr>
-                            </thead>
-                            <tbody id="containerProductos"></tbody>
-                          </table>
-
-                          <div id="total">
-                            Total Price: $ <span id="precioFinal"></span>
-                          </div>
-                          <button
-                            type="button"
-                            className="btn btn-secondary"
-                            id="btnConfirmar"
-                          >
-                            Confirm Purchase
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
+                <CartWidget />
               </div>
             </div>
-            <div></div>
-            <div></div>
           </nav>
         </div>
       </div>

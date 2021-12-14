@@ -3,24 +3,14 @@ import CartContext from "../../context/CartContext";
 import { useDeleteFromCart } from "../../context/CartContext.jsx";
 import "./index.css";
 import { Link } from "react-router-dom";
+import BackHome from "../BackHome/BackHome.jsx";
 
 const Cart = () => {
-  const { cart, borrar, total } = useContext(CartContext);
+  const { cart, borrar, precioTotal, calcularTotalPorItem } =
+    useContext(CartContext);
   const deleteProduct = useDeleteFromCart();
 
-  return cart.length === 0 ? (
-    <div className="zeroProductsContainer">
-      <h1 className="zeroProductsTitle">
-        You don't have any books added to your cart
-      </h1>
-      <p className="zeroProductsSubtitle">Click to return Home</p>
-      <Link to="/">
-        <button type="button" className="btn btn-secondary btn-sm">
-          Go back to home
-        </button>
-      </Link>
-    </div>
-  ) : (
+  return (
     <>
       {cart.map(item => (
         <div key={item.id}>
@@ -35,9 +25,15 @@ const Cart = () => {
                 <div className="card-body">
                   <h5 className="card-title">{item.nombre}</h5>
                   <p className="card-text">Price: $ {item.precio}</p>
+                  <p className="">Total: $ {calcularTotalPorItem(item)}</p>
                   <p className="card-text">Genre: {item.generoId}</p>
                   <p className="card-text">Quantity: {item.cantidad}</p>
-                  <button onClick={() => deleteProduct(item)}>Delete</button>
+                  <button
+                    className="btn btn-secondary"
+                    onClick={() => deleteProduct(item)}
+                  >
+                    Delete
+                  </button>
                 </div>
               </div>
             </div>
@@ -45,11 +41,14 @@ const Cart = () => {
         </div>
       ))}
 
-      <div className="priceContainer">
-        <p className="totalPrice">Total: ${total()}</p>
+      <div className="contentTotal">
+        <p>Total: $ {precioTotal()}</p>
+        <button className="btn btn-secondary margin-left" onClick={borrar}>
+          Clear
+        </button>
+        <BackHome />
       </div>
-
-      <button onClick={borrar}>Clear</button>
+      <br />
     </>
   );
 };
