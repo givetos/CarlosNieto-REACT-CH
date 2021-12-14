@@ -41,6 +41,21 @@ export const CartProvider = ({ children }) => {
     }
   };
 
+  /* Total */
+  const total = () => {
+    const sumaTotal = cart.reduce((x, y) => x + y.price * y.cantidad, 0);
+    return sumaTotal;
+  };
+
+  /* SumarCantidad */
+  const sumarCantidad = (item, quantity) => {
+    const cantidad = [...cart];
+    cantidad.forEach(c => {
+      c.id === item.id && (c.cantidad += quantity);
+    });
+    setCart(cantidad);
+  };
+
   const deleteFromCart = item => {
     setCart(cart.filter(product => product.id !== item.id));
   };
@@ -59,6 +74,7 @@ export const CartProvider = ({ children }) => {
         setIsCartOpen,
         openCart,
         deleteFromCart,
+        total,
       }}
     >
       {children}

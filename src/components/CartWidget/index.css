@@ -1,0 +1,15 @@
+.cartStyle {
+  margin-right: 50px;
+  margin-bottom: 20px;
+  width: 25px;
+}
+
+.cartContainer {
+  margin-right: 90px;
+  margin-bottom: 20px;
+  width: 100px;
+}
+
+.cart {
+  font-size: 25px;
+}
