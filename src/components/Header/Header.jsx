@@ -21,12 +21,9 @@ const Header = () => {
                     HOME
                   </button>
                 </Link>
-                <Link
-                  to="/genero/Magical Realism"
-                  className="nav-item nav-link"
-                >
+                <Link to="/genero/Realism" className="nav-item nav-link">
                   <button type="button" className="btn btn-light">
-                    MAGICAL REALISM
+                    REALISM
                   </button>
                 </Link>
                 <Link to="/genero/Biography" className="nav-item nav-link">

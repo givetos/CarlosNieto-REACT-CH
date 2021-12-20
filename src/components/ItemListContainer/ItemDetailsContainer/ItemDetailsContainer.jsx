@@ -12,6 +12,8 @@ const ItemDetailsContainer = ({ greetings }) => {
   const { addToCart } = useContext(CartContext);
   const { id } = useParams();
 
+  console.log(useParams);
+
   useEffect(() => {
     const db = getFirestore();
     const ref = doc(db, "products", id);

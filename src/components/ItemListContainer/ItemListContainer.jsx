@@ -2,30 +2,34 @@ import "./index.css";
 import React, { useState, useEffect } from "react";
 import ItemList from "./Item/ItemList";
 import { useParams } from "react-router-dom";
-import { collection, getDocs, getFirestore } from "firebase/firestore";
+import {
+  collection,
+  getDocs,
+  getFirestore,
+  query,
+  where,
+} from "firebase/firestore";
 //import { products } from "./Item/Items.jsx";
 import { Fragment } from "react";
 
 const ItemListContainer = ({ greetings }) => {
   const [items, setItems] = useState([]);
-  const { id } = useParams();
-
-  console.log(id);
+  const { generoId } = useParams();
 
   useEffect(() => {
     const db = getFirestore();
     const ref = collection(db, "products");
-    getDocs(ref).then(snapshot => {
-      const products = snapshot.docs.map(doc => {
-        return {
-          id: doc.id,
-          ...doc.data(),
-        };
-      });
-      const categorias = products.filter(i => i.category === `${id}`);
-      id === undefined ? setItems(products) : setItems(categorias);
+    const filtrado = generoId
+      ? query(ref, where("generoId", "==", generoId))
+      : ref;
+    getDocs(filtrado).then(snapshot => {
+      const products = snapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      setItems(products);
     });
-  }, [id]);
+  }, [generoId]);
 
   return (
     <Fragment>
@@ -34,7 +38,6 @@ const ItemListContainer = ({ greetings }) => {
     </Fragment>
   );
 };
-
 //Codigo anterior a Firebase:
 /* useEffect(() => {
     const traerProductos = new Promise((resolve, reject) => {

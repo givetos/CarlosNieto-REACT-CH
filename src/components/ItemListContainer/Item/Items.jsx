@@ -4,7 +4,7 @@ export const products = [
     nombre: "Kafka on the Shore",
     precio: 2250,
     stock: 10,
-    generoId: "magicalRealism",
+    generoId: "Realism",
     img: "https://res.cloudinary.com/lcdtm/image/upload/v1637608888/book1_qv7kzj.jpg",
   },
 
@@ -13,7 +13,7 @@ export const products = [
     nombre: "IQ84",
     precio: 1350,
     stock: 7,
-    generoId: "magicalRealism",
+    generoId: "Realism",
     img: "https://res.cloudinary.com/lcdtm/image/upload/v1637608888/book2_udhxbn.jpg",
   },
 
@@ -22,7 +22,7 @@ export const products = [
     nombre: "After Dark",
     precio: 2450,
     stock: 5,
-    generoId: "magicalRealism",
+    generoId: "Realism",
     img: "https://res.cloudinary.com/lcdtm/image/upload/v1637608888/book3_nvspz6.jpg",
   },
 
@@ -31,7 +31,7 @@ export const products = [
     nombre: "The Wind-Up Bird Chronicle",
     precio: 2300,
     stock: 8,
-    generoId: "magicalRealism",
+    generoId: "Realism",
     img: "https://res.cloudinary.com/lcdtm/image/upload/v1637608889/book4_o2sjti.jpg",
   },
 
@@ -58,7 +58,7 @@ export const products = [
     nombre: "A Wild Sheep Chase",
     precio: 1780,
     stock: 20,
-    generoId: "magicalRealism",
+    generoId: "Realism",
     img: "https://res.cloudinary.com/lcdtm/image/upload/v1637608889/book7_tj4bqf.jpg",
   },
 
@@ -67,7 +67,7 @@ export const products = [
     nombre: "Sputnik Sweetheart",
     precio: 2470,
     stock: 20,
-    generoId: "magicalRealism",
+    generoId: "Realism",
     img: "https://res.cloudinary.com/lcdtm/image/upload/v1637608889/book8_vjkiwd.jpg",
   },
 ];
