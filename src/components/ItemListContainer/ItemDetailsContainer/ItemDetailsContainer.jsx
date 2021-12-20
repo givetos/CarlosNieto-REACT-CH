@@ -1,19 +1,30 @@
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 import React, { useState, useEffect, useContext } from "react";
 import ItemDetails from "../ItemDetails/ItemDetails.jsx";
-import { products } from "../Item/Items.jsx";
+//import { products } from "../Item/Items.jsx";
 import { Fragment } from "react";
 import { useParams } from "react-router-dom";
 import CartContext from "../../../context/CartContext";
 
 const ItemDetailsContainer = ({ greetings }) => {
-  const { id } = useParams();
   const [item, setItem] = useState([]);
-  const [loader, setLoader] = useState(true);
   const [irAlCarrito, setIrAlCarrito] = useState(false);
   const { addToCart } = useContext(CartContext);
+  const { id } = useParams();
 
   useEffect(() => {
-    /*     setLoader(true); */
+    const db = getFirestore();
+    const ref = doc(db, "products", id);
+    getDoc(ref).then(snap => {
+      setItem({
+        id: snap.id,
+        ...snap.data(),
+      });
+    });
+  }, [id]);
+
+  //Logica anterior a Firebase:
+  /* useEffect(() => {
     const traerProductos = new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(products);
@@ -27,7 +38,7 @@ const ItemDetailsContainer = ({ greetings }) => {
       .catch(error => {
         console.log(error);
       });
-  }, [id]);
+  }, [id]); */
 
   const onAdd = cantidad => {
     console.log({ ...item, quantity: cantidad });

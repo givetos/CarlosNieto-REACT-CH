@@ -1,4 +1,4 @@
-import logo from "../assets/murakami-logo.png";
+import logo from "../assets/murakami-logo.jpg";
 import CartWidget from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
 
