@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom";
 import CartContext from "../../../context/CartContext";
 
 const ItemDetailsContainer = ({ greetings }) => {
-  const [item, setItem] = useState([]);
+  const [item, setItem] = useState({});
   const [irAlCarrito, setIrAlCarrito] = useState(false);
   const { addToCart } = useContext(CartContext);
   const { id } = useParams();

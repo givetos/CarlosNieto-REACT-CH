@@ -7,6 +7,7 @@ import reportWebVitals from "./reportWebVitals";
 import { initializeApp } from "firebase/app";
 //import { getFirestore, collection, addDoc } from "firebase/firestore";
 
+//Viejo firebase:
 const firebaseConfig = {
   apiKey: "AIzaSyBYQeRJJ9s6u5W1qnOqlQ3GlzuBAxP1F40",
   authDomain: "app-react-13281.firebaseapp.com",
