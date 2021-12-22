@@ -9,7 +9,6 @@ import {
   query,
   where,
 } from "firebase/firestore";
-//import { products } from "./Item/Items.jsx";
 import { Fragment } from "react";
 
 const ItemListContainer = ({ greetings }) => {
@@ -38,22 +37,5 @@ const ItemListContainer = ({ greetings }) => {
     </Fragment>
   );
 };
-//Codigo anterior a Firebase:
-/* useEffect(() => {
-    const traerProductos = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(products);
-      }, 1500);
-    });
-    traerProductos
-      .then(res => {
-        const filtrado = res.filter(prod => prod.generoId === generoId);
-
-        generoId ? setItems(filtrado) : setItems(res);
-      })
-      .catch(error => {
-        console.log(error);
-      });
-  }, [generoId]); */
 
 export default ItemListContainer;

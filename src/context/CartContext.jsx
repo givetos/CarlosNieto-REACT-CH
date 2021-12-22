@@ -6,6 +6,7 @@ export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [irAlCarrito, setIrAlCarrito] = useState(false);
+  const [userEmail, setUserEmail] = useState("");
 
   const openCart = () => {
     setIsCartOpen(!isCartOpen);
@@ -66,6 +67,9 @@ export const CartProvider = ({ children }) => {
   const borrar = () => {
     setCart([]);
   };
+  const getUser = form => {
+    setUserEmail(form);
+  };
 
   return (
     <CartContext.Provider
@@ -81,6 +85,8 @@ export const CartProvider = ({ children }) => {
         setIsCartOpen,
         openCart,
         deleteFromCart,
+        getUser,
+        userEmail,
       }}
     >
       {children}

@@ -3,8 +3,8 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-//import { products } from "./components/ItemListContainer/Item/Items";
 import { initializeApp } from "firebase/app";
+//import { products } from "./components/ItemListContainer/Item/Items";
 //import { getFirestore, collection, addDoc } from "firebase/firestore";
 
 //Viejo firebase:
