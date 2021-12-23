@@ -44,16 +44,19 @@ const Order = () => {
         <h1>Loading...</h1>
       ) : (
         <>
-          <h1 style={{ textAlign: "center" }}>
-            Aca te dejamos tus tickets de compra
-          </h1>
+          <h1 style={{ marginLeft: "10px" }}>Your purchase tickets</h1>
           {order.map(ord => (
             <Mensaje key={ord.id} ord={ord} />
           ))}
         </>
       )}
       <Link to="/">
-        <button>Volvete</button>
+        <button
+          className="btn btn-secondary"
+          style={{ marginLeft: "10px", marginBottom: "20px" }}
+        >
+          Back Home
+        </button>
       </Link>
     </div>
   );

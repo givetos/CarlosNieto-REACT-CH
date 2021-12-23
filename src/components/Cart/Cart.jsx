@@ -45,30 +45,42 @@ const Cart = () => {
               <CartDetail key={item.id} item={item} />
             ))}
             <div className="contentTotal">
-              <p>Total: ${precioTotal()}</p>
-              <button onClick={borrar}>Clear</button>
+              <p style={{ marginLeft: "10px" }}>Total: ${precioTotal()}</p>
+              <button
+                className="btn btn-secondary"
+                style={{ marginLeft: "10px" }}
+                onClick={borrar}
+              >
+                Clear
+              </button>
               <BackHome />
             </div>
             <br />
-            <form method="Post" onSubmit={finalizar}>
+            <form
+              style={{ marginBottom: "20px", marginLeft: "10px" }}
+              method="Post"
+              onSubmit={finalizar}
+            >
               <input
                 onChange={llenarFormulario}
                 type="email"
                 name="email"
-                placeholder="email"
+                placeholder="Email"
               />
               <input
                 onChange={llenarFormulario}
                 type="text"
                 name="nombre"
-                placeholder="nombre"
+                placeholder="Name"
               />
               <button
+                className="btn-lg btn-secondary"
+                style={{ marginLeft: "5px" }}
                 disabled={
                   cart?.length === 0 || form.nombre === "" || form.email === ""
                 }
               >
-                Comprar
+                Buy
               </button>
             </form>
           </>

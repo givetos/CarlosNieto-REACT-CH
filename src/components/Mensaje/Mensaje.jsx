@@ -5,10 +5,10 @@ const Mensaje = ({ ord }) => {
   const { buyer } = ord;
 
   return (
-    <div>
-      <p>ID de la compra: {ord.id}</p>
-      <p>Fecha: {ord.date}</p>
-      <p>Producto: {nombreprod}</p>
+    <div style={{ border: "1px solid black", margin: "30px", padding: "7px" }}>
+      <p>Purchase ID: {ord.id}</p>
+      <p>Date: {ord.date}</p>
+      <p>Product: {nombreprod}</p>
       <p>Email: {buyer}</p>
     </div>
   );

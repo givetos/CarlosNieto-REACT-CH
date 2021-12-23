@@ -49,12 +49,10 @@ export const CartProvider = ({ children }) => {
     }
   };
 
-  /* Total */
   const calcularTotalPorItem = item => {
     return item.precio * item.cantidad;
   };
 
-  /* Precio total */
   function precioTotal() {
     let subTotal = cart.reduce((acc, el) => acc + el.precio * el.cantidad, 0);
     return subTotal;
