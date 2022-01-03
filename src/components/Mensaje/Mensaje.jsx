@@ -9,7 +9,7 @@ const Mensaje = ({ ord }) => {
         <div
           style={{ border: "1px solid black", margin: "30px", padding: "7px" }}
         >
-          <p>Purchase ID: {ord.id}</p>
+          <p>Ticket ID: {ord.id}</p>
           <p>Date: {ord.date}</p>
           <p>Product: {ticket.nombre}</p>
           <p>Email: {buyer}</p>

@@ -8,8 +8,7 @@ const Footer = () => {
           <div class="col-lg-12 col-xs-12">
             <p>
               <b className="d-flex justify-content-center pt-2">
-                {" "}
-                Murakami's Book
+                Murakami's Book © Copyright 2021
               </b>
             </p>
           </div>

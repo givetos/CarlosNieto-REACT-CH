@@ -20,7 +20,6 @@ const firebaseConfig = {
 
 initializeApp(firebaseConfig);
 
-//Codigo anterior a pasar logica a itemListContainer():
 /* const db = getFirestore();
 const ref = collection(db, "products");
 products.map(product => addDoc(ref, product)); */
