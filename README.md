@@ -1,44 +1,39 @@
-# Murakami's Book - Aruki Murakami Book Sale :books:
+# :books: Murakami's Book - Aruki Murakami Book Sale :books:
 ---
 
-Murakami's Book es un e-commerce de venta de libros del celebre escritor Aruki Murakami.
+Murakami's Book is an e-commerce for the sale of books by the famous writer Aruki Murakami.
 
-El sitio web es una SPA (Single Page Application) con:
+The website is a SPA (Single Page Application) with:
 
-Menú de navegación
+- Navigation Menu
+- Home: All the products on the page are displayed in this view
+- Sections: In these different sections the different genres and their respective author titles are displayed
+- Shopping Cart: In this view the area of the shopping cart of the selected products with their respective tickets is displayed
+- Detail view: View with all the details of the product.
 
-- Home - En esta vista se visualizan todos los productos de la página
-- Secciones En estas diferentes secciones se visualizan los distintos generos y sus respectivos titulos del autor
-- Carrito de Compras En esta vista se visualiza el area del carrito de compras de los productos seleccionados con sus respectivos tickets
-
-Vista de detalles: vista con todos los detalles del producto.
-
-## Instalación
-
----
-
-1. Cloná el repositorio
-2. Parado en la raíz del proyecto corré el comando "npm install" para instalar todas las dependencias del proyecto
-3. Usá "yarn start" para correr el proyecto, que estará disponible en http://localhost:3000/
-
-## Dependencias
+## Installation :computer:
 
 ---
 
-Uso de Bootstrap para dar formato a la aplicación.
+1. Clone the repository
+2. Stopped in the root of the project I ran the command "npm install" to install all the dependencies of the project
+3. Use "npm start" to run the project, which will be available at http://localhost:3000/
 
-Uso de Css nativo para dar formato a la aplciacion.
+## Dependencies :card_index_dividers:
 
-Uso de React Router Dom para la navegación.
+---
 
-## Aplicación en funcionamiento
+- Using Bootstrap to format the application and native CSS to format the application.
+- Using React Router Dom for navigation.
+
+## Running application :calling:
 
 ---
 
 ![React-App](https://user-images.githubusercontent.com/76953602/147995007-98208314-7924-439a-baa3-a8ca0a6e9e9f.gif)
 
-Autor:
+Author:
 
-Amadeo Isella
+Amadeo Isella :smiley:
 
-2021 - Curso de React en CoderHouse
+2021 - Curso de React en CoderHouse :atom:
