@@ -1,5 +1,4 @@
-# Murakami's Book - Venta de libros de Aruki Murakami
-
+# Murakami's Book - Aruki Murakami Book Sale :books:
 ---
 
 Murakami's Book es un e-commerce de venta de libros del celebre escritor Aruki Murakami.
@@ -20,7 +19,7 @@ Vista de detalles: vista con todos los detalles del producto.
 
 1. Cloná el repositorio
 2. Parado en la raíz del proyecto corré el comando "npm install" para instalar todas las dependencias del proyecto
-3. Usá "yarn start" para correr el proyecto, que estará disponible en http://localhost:3000
+3. Usá "yarn start" para correr el proyecto, que estará disponible en http://localhost:3000/
 
 ## Dependencias
 
