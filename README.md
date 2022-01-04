@@ -36,6 +36,8 @@ Uso de React Router Dom para la navegación.
 
 ---
 
+![React-App](https://user-images.githubusercontent.com/76953602/147995007-98208314-7924-439a-baa3-a8ca0a6e9e9f.gif)
+
 Autor:
 
 Amadeo Isella
