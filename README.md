@@ -34,6 +34,6 @@ The website is a SPA (Single Page Application) with:
 
 Author:
 
-Amadeo Isella :smiley:
+Carlos Nieto :smiley:
 
-2021 - Curso de React en CoderHouse :atom:
+2022 - Curso de React en CoderHouse :atom:
